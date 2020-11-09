@@ -4,11 +4,12 @@ from csv import writer
 import matplotlib.pyplot as plt
 import matplotlib
 import pandas as pd
+#imports needed for program to operate
 
 
 table = pd.read_html("https://www.basketball-reference.com/leagues/NBA_2020_leaders.html")
 response = requests.get("https://www.basketball-reference.com/leagues/NBA_2020_leaders.html")
-
+#extracts/scrapes from this website
 
 
 soup = BeautifulSoup(response.text, 'html.parser')
@@ -21,12 +22,13 @@ APG = soup.find_all(id="leaders_ast_per_g")
 
 PER = soup.find_all(id="leaders_per")
 
+#uses these 4 methods in the HTML code to find the statistical categories.
+
 print(" ")
 
 statInput = input("Which statistical category would you want a graph of? (Choose from (PPG, RPG, APG, or PER) ")
 statInput = statInput.upper()
-
-
+#prompts user with this question and makes it not case-sensitive.
 
 data = []
 
