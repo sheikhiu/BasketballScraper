@@ -1,0 +1,6 @@
+Must have followiing installed through Python:
+- Pandas
+- MatPlotLib
+- Requests
+- CSV
+- BeautifulSoup
